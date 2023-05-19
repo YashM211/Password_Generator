@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div id="wrapper" class="bg-[#3A1657] h-[100vh] flex justify-center items-center " >
+        <div class="conatainer gap-5 ">
+            <!-- HEADING -->
+            <h1 class="font-bold gap-5 text-2xl text-white">PASSWORD GENERATOR</h1 >
+
+            <!-- PASSWORD SHOWING BOX WITH COPY BUTTON -->
+            <div  class="  my-3 flex  rounded-md items-center relative bg-black bg-opacity-[0.4] ">
+                <input id="password-display" class=" p-3 gap-3 text-yellow-500 font-extrabold  bg-transparent" type="text" id="password" name="password" placeholder="Password" value="" readonly>
+                <span  id="copied-text border-2" class="z-10 text-xs absolute left-[11rem] top-6 scale-0 ">Copied</span>
+                <i  id="copy-btn" class="z-10 text-green-400 font-bold text-xl p-2 rounded-md fa fa-copy cursor-pointer"></i>
+            </div>
+
+            <!-- LENGTH , SLIDER , CHECKBOXES , STRENGTH AND BUTTON SECTION -->
+            <div class="z-0 rounded-md bg-black bg-opacity-[0.5] gap-6 p-3 my-3
+            ">
+                <!-- Password Length -->
+                <div class="z-10 flex justify-between ">
+                    <p  class="text-white font-bold">Password Length</p>
+                    <span class="text-white " id="password-length"></span>
+                </div>
+
+                <!-- Slider -->
+                <div id="slide-container" class="">
+                    <input class="w-full  h-2 bg-yellow-400 rounded-lg  appearance-none cursor-pointer  " type="range" min="1" max="20" value="" class="slider" id="slider" >
+                </div>
+
+                <!-- CheckBoxes -->
+                <div class=" my-2">
+                    <div>
+                        <input class="checkbox" type="checkbox"  name="Uppercase" id="Uppercase">
+                        <label class="text-white  font-bold
+                        " for="Uppercase">Include Uppercase Letters</label>
+                    </div>
+    
+                    <div>
+                        <input class="checkbox" type="checkbox" name="Lowercase" id="Lowercase">
+                        <label class="text-white font-bold
+                        " for="Lowercase">Include Lowercase Letters</label>
+                    </div>
+    
+                    <div>
+                        <input class="checkbox" type="checkbox" name="Numbers" id="Numbers">
+                        <label class="text-white font-bold
+                        " for="Numbers">Include Numbers </label>
+                    </div>
+    
+                    <div>
+                        <input class="checkbox" type="checkbox" name="Symbols" id="Symbols">
+                        <label class="text-white font-bold
+                        " for="Symbols">Include Symbols </label>
+                    </div>
+                </div>
+
+                <!-- Strength Section -->
+                <div class="my-2 flex justify-between">
+                    <span class="text-white font-bold">Strength</span>
+                    <div  id="strength"  class="  w-4 my-1 shadow-lg shadow-inherit h-4 rounded-lg    bg-gray-500 text-gray-500"></div>
+                </div>
+
+                <!-- Password Generate Button -->
+                <button  id="password-generate-btn" class="z-10 w-full rounded-md p-1 my-2 text-white font-extrabold bg-purple-950 ">Generate Password</button>
+
+            </div>
+
+                
+                
+
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
